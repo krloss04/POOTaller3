@@ -1,0 +1,54 @@
+﻿@model TiendaVideojuegos.Models.Videojuego
+
+@{
+    ViewData["Title"] = "Detalles del Videojuego";
+}
+
+<h1>Detalles del Videojuego</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdProducto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdProducto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Plataforma)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Plataforma)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaIngreso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaIngreso)
+        </dd>
+    </dl>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.IdProducto" class="btn btn-primary">Editar</a> |
+    <a asp-action="Index">Volver a la lista</a>
+</div>
